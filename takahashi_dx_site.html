@@ -48,22 +48,11 @@ nav {
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(184,150,106,0.15);
 }
-.nav-logo {
-  display: flex; flex-direction: column; gap: 2px;
-}
-.nav-logo-main {
-  font-family: var(--ff-serif); font-size: 17px; font-weight: 600;
-  color: var(--white); letter-spacing: 0.08em;
-}
-.nav-logo-sub {
-  font-size: 9px; color: var(--gold); letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
+.nav-logo { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo-main { font-family: var(--ff-serif); font-size: 17px; font-weight: 600; color: var(--white); letter-spacing: 0.08em; }
+.nav-logo-sub { font-size: 9px; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; }
 .nav-links { display: flex; gap: 2.5rem; align-items: center; }
-.nav-links a {
-  font-size: 12px; color: var(--muted); text-decoration: none;
-  transition: color 0.2s; letter-spacing: 0.08em;
-}
+.nav-links a { font-size: 12px; color: var(--muted); text-decoration: none; transition: color 0.2s; letter-spacing: 0.08em; }
 .nav-links a:hover { color: var(--gold-light); }
 .nav-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.1); }
 .nav-cta {
@@ -81,252 +70,109 @@ nav {
   position: relative; overflow: hidden;
 }
 .hero-bg { position: absolute; inset: 0; pointer-events: none; }
-.hero-stripe {
-  position: absolute; top: 0; right: 0; width: 45%;
-  height: 100%; background: linear-gradient(160deg, rgba(26,51,86,0.4) 0%, transparent 60%);
-}
-.hero-line {
-  position: absolute; left: 5rem; top: 0; bottom: 0;
-  width: 1px; background: linear-gradient(to bottom, transparent, rgba(184,150,106,0.3) 30%, rgba(184,150,106,0.3) 70%, transparent);
-}
-.hero-ornament {
-  position: absolute; right: 8%; top: 50%; transform: translateY(-50%);
-  width: 380px; height: 380px;
-  border: 1px solid rgba(184,150,106,0.08);
-  border-radius: 50%;
-}
-.hero-ornament::before {
-  content: ''; position: absolute; inset: 20px;
-  border: 1px solid rgba(184,150,106,0.06); border-radius: 50%;
-}
-.hero-ornament::after {
-  content: ''; position: absolute; inset: 60px;
-  border: 1px solid rgba(184,150,106,0.04); border-radius: 50%;
-}
+.hero-stripe { position: absolute; top: 0; right: 0; width: 45%; height: 100%; background: linear-gradient(160deg, rgba(26,51,86,0.4) 0%, transparent 60%); }
+.hero-line { position: absolute; left: 5rem; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, rgba(184,150,106,0.3) 30%, rgba(184,150,106,0.3) 70%, transparent); }
+.hero-ornament { position: absolute; right: 8%; top: 50%; transform: translateY(-50%); width: 380px; height: 380px; border: 1px solid rgba(184,150,106,0.08); border-radius: 50%; }
+.hero-ornament::before { content: ''; position: absolute; inset: 20px; border: 1px solid rgba(184,150,106,0.06); border-radius: 50%; }
+.hero-ornament::after { content: ''; position: absolute; inset: 60px; border: 1px solid rgba(184,150,106,0.04); border-radius: 50%; }
 .hero-content { position: relative; z-index: 1; max-width: 680px; padding-left: 3rem; }
-.hero-tag {
-  display: inline-flex; align-items: center; gap: 12px;
-  margin-bottom: 2rem; color: var(--gold); font-size: 11px; letter-spacing: 0.2em;
-}
+.hero-tag { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 2rem; color: var(--gold); font-size: 11px; letter-spacing: 0.2em; }
 .hero-tag::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
-.hero h1 {
-  font-family: var(--ff-serif);
-  font-size: clamp(2.4rem, 4.5vw, 4rem);
-  font-weight: 600; line-height: 1.2; margin-bottom: 1.8rem;
-  letter-spacing: 0.04em; color: var(--white);
-}
-.hero h1 em {
-  font-style: normal; color: var(--gold-light);
-  display: block; font-size: 0.75em; letter-spacing: 0.1em;
-  margin-bottom: 0.3em;
-}
-.hero-desc {
-  font-size: 14px; color: var(--silver); line-height: 2.1;
-  margin-bottom: 3rem; max-width: 520px;
-  border-left: 2px solid rgba(184,150,106,0.3);
-  padding-left: 1.5rem;
-}
+.hero h1 { font-family: var(--ff-serif); font-size: clamp(2.4rem, 4.5vw, 4rem); font-weight: 600; line-height: 1.2; margin-bottom: 1.8rem; letter-spacing: 0.04em; color: var(--white); }
+.hero h1 em { font-style: normal; color: var(--gold-light); display: block; font-size: 0.75em; letter-spacing: 0.1em; margin-bottom: 0.3em; }
+.hero-desc { font-size: 14px; color: var(--silver); line-height: 2.1; margin-bottom: 3rem; max-width: 520px; border-left: 2px solid rgba(184,150,106,0.3); padding-left: 1.5rem; }
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-gold {
-  background: var(--gold); color: var(--navy-deep);
-  border: none; padding: 15px 36px; border-radius: 2px;
-  font-size: 13px; font-weight: 700; cursor: pointer;
-  font-family: var(--ff-body); letter-spacing: 0.08em;
-  transition: background 0.2s, transform 0.2s;
-}
+.btn-gold { background: var(--gold); color: var(--navy-deep); border: none; padding: 15px 36px; border-radius: 2px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: var(--ff-body); letter-spacing: 0.08em; transition: background 0.2s, transform 0.2s; }
 .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
-.btn-ghost {
-  background: transparent; color: var(--silver-light);
-  border: 1px solid rgba(200,214,229,0.3); padding: 15px 36px; border-radius: 2px;
-  font-size: 13px; cursor: pointer; font-family: var(--ff-body);
-  letter-spacing: 0.08em; transition: border-color 0.2s, color 0.2s;
-}
+.btn-ghost { background: transparent; color: var(--silver-light); border: 1px solid rgba(200,214,229,0.3); padding: 15px 36px; border-radius: 2px; font-size: 13px; cursor: pointer; font-family: var(--ff-body); letter-spacing: 0.08em; transition: border-color 0.2s, color 0.2s; }
 .btn-ghost:hover { border-color: var(--gold); color: var(--gold-light); }
 
 /* ─── STATS BAR ─── */
-.stats-bar {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid rgba(184,150,106,0.15);
-  border-bottom: 1px solid rgba(184,150,106,0.15);
-}
-.stat-item {
-  padding: 2.5rem 3rem; position: relative;
-  border-right: 1px solid rgba(184,150,106,0.1);
-}
+.stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(184,150,106,0.15); border-bottom: 1px solid rgba(184,150,106,0.15); }
+.stat-item { padding: 2.5rem 3rem; position: relative; border-right: 1px solid rgba(184,150,106,0.1); }
 .stat-item:last-child { border-right: none; }
-.stat-num {
-  font-family: var(--ff-serif); font-size: 2.8rem; font-weight: 600;
-  color: var(--gold); line-height: 1; display: block; margin-bottom: 8px;
-}
+.stat-num { font-family: var(--ff-serif); font-size: 2.8rem; font-weight: 600; color: var(--gold); line-height: 1; display: block; margin-bottom: 8px; }
 .stat-label { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; }
 
 /* ─── SECTION COMMON ─── */
 section { padding: var(--section-pad); }
-.sec-eyebrow {
-  display: flex; align-items: center; gap: 16px;
-  font-size: 10px; color: var(--gold); letter-spacing: 0.25em;
-  text-transform: uppercase; margin-bottom: 1.5rem;
-}
+.sec-eyebrow { display: flex; align-items: center; gap: 16px; font-size: 10px; color: var(--gold); letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 1.5rem; }
 .sec-eyebrow::after { content: ''; flex: 1; max-width: 48px; height: 1px; background: var(--gold); }
-.sec-title {
-  font-family: var(--ff-serif);
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 600; line-height: 1.25; margin-bottom: 1.25rem;
-  color: var(--white); letter-spacing: 0.04em;
-}
+.sec-title { font-family: var(--ff-serif); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 600; line-height: 1.25; margin-bottom: 1.25rem; color: var(--white); letter-spacing: 0.04em; }
 .sec-sub { font-size: 14px; color: var(--silver); line-height: 2; max-width: 540px; margin-bottom: 3.5rem; }
 
 /* ─── SERVICES ─── */
 .services-section { background: var(--navy); }
-.services-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 1px; background: rgba(184,150,106,0.1);
-  border: 1px solid rgba(184,150,106,0.1);
-}
-.svc-card {
-  background: var(--navy);
-  padding: 2.5rem;
-  transition: background 0.3s;
-  cursor: default;
-}
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(184,150,106,0.1); border: 1px solid rgba(184,150,106,0.1); }
+.svc-card { background: var(--navy); padding: 2.5rem; transition: background 0.3s; cursor: default; }
 .svc-card:hover { background: rgba(26,51,86,0.8); }
-.svc-num {
-  font-family: var(--ff-serif); font-size: 3rem; font-weight: 600;
-  color: rgba(184,150,106,0.15); line-height: 1; margin-bottom: 1.25rem;
+.svc-card.clickable { cursor: pointer; position: relative; }
+.svc-card.clickable:hover { background: rgba(26,51,86,0.9); }
+.svc-card.clickable .svc-open-hint {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem;
+  color: var(--gold-light); font-size: 11px; letter-spacing: 0.1em;
+  border-bottom: 1px solid rgba(184,150,106,0.3); padding-bottom: 2px;
+  transition: gap 0.2s;
 }
-.svc-card h3 {
-  font-size: 15px; font-weight: 700; margin-bottom: 0.75rem;
-  color: var(--white); letter-spacing: 0.03em;
-}
+.svc-card.clickable:hover .svc-open-hint { gap: 10px; }
+.svc-num { font-family: var(--ff-serif); font-size: 3rem; font-weight: 600; color: rgba(184,150,106,0.15); line-height: 1; margin-bottom: 1.25rem; }
+.svc-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 0.75rem; color: var(--white); letter-spacing: 0.03em; }
 .svc-card p { font-size: 13px; color: var(--silver); line-height: 1.9; }
-.svc-badge {
-  display: inline-block; margin-top: 1.25rem;
-  border: 1px solid rgba(184,150,106,0.3); color: var(--gold);
-  border-radius: 2px; padding: 3px 10px; font-size: 10px; letter-spacing: 0.1em;
-}
+.svc-badge { display: inline-block; margin-top: 1.25rem; border: 1px solid rgba(184,150,106,0.3); color: var(--gold); border-radius: 2px; padding: 3px 10px; font-size: 10px; letter-spacing: 0.1em; }
 
 /* ─── AI DEMO ─── */
 .ai-section { background: var(--navy-deep); }
 .ai-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
-.ai-terminal {
-  background: #0d1e35; border: 1px solid rgba(184,150,106,0.2);
-  border-radius: 4px; overflow: hidden;
-}
-.terminal-header {
-  background: rgba(184,150,106,0.08);
-  border-bottom: 1px solid rgba(184,150,106,0.15);
-  padding: 0.85rem 1.25rem;
-  display: flex; align-items: center; gap: 10px;
-}
+.ai-terminal { background: #0d1e35; border: 1px solid rgba(184,150,106,0.2); border-radius: 4px; overflow: hidden; }
+.terminal-header { background: rgba(184,150,106,0.08); border-bottom: 1px solid rgba(184,150,106,0.15); padding: 0.85rem 1.25rem; display: flex; align-items: center; gap: 10px; }
 .t-dot { width: 10px; height: 10px; border-radius: 50%; }
 .terminal-title { font-size: 11px; color: var(--muted); margin-left: auto; letter-spacing: 0.1em; }
-.chat-area {
-  padding: 1.5rem; min-height: 280px; max-height: 320px;
-  overflow-y: auto; display: flex; flex-direction: column; gap: 1rem;
-}
+.chat-area { padding: 1.5rem; min-height: 280px; max-height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; }
 .chat-area::-webkit-scrollbar { width: 4px; }
 .chat-area::-webkit-scrollbar-track { background: transparent; }
 .chat-area::-webkit-scrollbar-thumb { background: rgba(184,150,106,0.2); border-radius: 2px; }
 .c-msg { display: flex; gap: 10px; align-items: flex-start; }
 .c-msg.user { flex-direction: row-reverse; }
-.c-av {
-  width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 10px; font-weight: 700; letter-spacing: 0.05em;
-}
+.c-av { width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; letter-spacing: 0.05em; }
 .av-ai { background: rgba(184,150,106,0.15); color: var(--gold); border: 1px solid rgba(184,150,106,0.3); }
 .av-user { background: rgba(26,51,86,0.8); color: var(--silver-light); border: 1px solid rgba(200,214,229,0.2); }
-.c-bubble {
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 4px; padding: 10px 14px;
-  font-size: 13px; line-height: 1.75; max-width: 82%;
-}
+.c-bubble { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: 4px; padding: 10px 14px; font-size: 13px; line-height: 1.75; max-width: 82%; }
 .c-msg.user .c-bubble { background: rgba(26,51,86,0.6); border-color: rgba(200,214,229,0.1); }
-.ai-typing { display: none; }
-.ai-typing span {
-  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
-  background: var(--gold); margin: 0 2px;
-  animation: blink 1.2s infinite;
-}
-.ai-typing span:nth-child(2) { animation-delay: 0.2s; }
-.ai-typing span:nth-child(3) { animation-delay: 0.4s; }
 @keyframes blink { 0%,100%{opacity:0.2} 50%{opacity:1} }
-.terminal-input {
-  border-top: 1px solid rgba(184,150,106,0.15);
-  padding: 1rem 1.25rem; display: flex; gap: 10px;
-}
-.t-inp {
-  flex: 1; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 2px; padding: 9px 12px; font-size: 13px; color: var(--text);
-  font-family: var(--ff-body); outline: none; transition: border-color 0.2s;
-}
+.terminal-input { border-top: 1px solid rgba(184,150,106,0.15); padding: 1rem 1.25rem; display: flex; gap: 10px; }
+.t-inp { flex: 1; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 2px; padding: 9px 12px; font-size: 13px; color: var(--text); font-family: var(--ff-body); outline: none; transition: border-color 0.2s; }
 .t-inp:focus { border-color: rgba(184,150,106,0.4); }
-.t-send {
-  background: var(--gold); color: var(--navy-deep); border: none;
-  padding: 9px 18px; border-radius: 2px; font-weight: 700;
-  font-size: 12px; cursor: pointer; font-family: var(--ff-body);
-  letter-spacing: 0.05em; transition: opacity 0.2s;
-}
+.t-send { background: var(--gold); color: var(--navy-deep); border: none; padding: 9px 18px; border-radius: 2px; font-weight: 700; font-size: 12px; cursor: pointer; font-family: var(--ff-body); letter-spacing: 0.05em; transition: opacity 0.2s; }
 .t-send:hover { opacity: 0.85; }
 .demo-hints { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; }
-.hint-btn {
-  background: transparent; border: 1px solid rgba(184,150,106,0.25);
-  color: var(--gold); padding: 5px 14px; border-radius: 2px;
-  font-size: 11px; cursor: pointer; font-family: var(--ff-body);
-  transition: background 0.2s; letter-spacing: 0.05em;
-}
+.hint-btn { background: transparent; border: 1px solid rgba(184,150,106,0.25); color: var(--gold); padding: 5px 14px; border-radius: 2px; font-size: 11px; cursor: pointer; font-family: var(--ff-body); transition: background 0.2s; letter-spacing: 0.05em; }
 .hint-btn:hover { background: rgba(184,150,106,0.1); }
 
 /* ─── PROCESS ─── */
 .process-section { background: var(--navy); }
 .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
-.process-steps::before {
-  content: ''; position: absolute; top: 28px; left: 10%; right: 10%;
-  height: 1px; background: linear-gradient(to right, transparent, rgba(184,150,106,0.3) 20%, rgba(184,150,106,0.3) 80%, transparent);
-}
+.process-steps::before { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 1px; background: linear-gradient(to right, transparent, rgba(184,150,106,0.3) 20%, rgba(184,150,106,0.3) 80%, transparent); }
 .p-step { padding: 0 1.5rem; text-align: center; }
-.p-step-num {
-  width: 56px; height: 56px; border-radius: 50%;
-  background: var(--navy-deep); border: 1px solid rgba(184,150,106,0.4);
-  display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem;
-  font-family: var(--ff-serif); font-size: 1.2rem; color: var(--gold); font-weight: 600;
-}
+.p-step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--navy-deep); border: 1px solid rgba(184,150,106,0.4); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-family: var(--ff-serif); font-size: 1.2rem; color: var(--gold); font-weight: 600; }
 .p-step h4 { font-size: 13px; font-weight: 700; margin-bottom: 0.5rem; color: var(--white); }
 .p-step p { font-size: 12px; color: var(--muted); line-height: 1.8; }
 
 /* ─── PRICING ─── */
 .pricing-section { background: var(--navy-deep); }
 .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.price-card {
-  border: 1px solid rgba(255,255,255,0.08); border-radius: 2px; padding: 2.5rem;
-  position: relative; transition: border-color 0.3s;
-}
+.price-card { border: 1px solid rgba(255,255,255,0.08); border-radius: 2px; padding: 2.5rem; position: relative; transition: border-color 0.3s; }
 .price-card:hover { border-color: rgba(184,150,106,0.3); }
 .price-card.featured { border-color: rgba(184,150,106,0.4); background: rgba(26,51,86,0.3); }
-.price-featured-badge {
-  position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
-  background: var(--gold); color: var(--navy-deep); padding: 4px 20px;
-  font-size: 10px; font-weight: 700; letter-spacing: 0.15em;
-}
-.price-name {
-  font-family: var(--ff-serif); font-size: 1.4rem; font-weight: 600;
-  color: var(--white); margin-bottom: 0.5rem;
-}
+.price-featured-badge { position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy-deep); padding: 4px 20px; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; }
+.price-name { font-family: var(--ff-serif); font-size: 1.4rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
 .price-desc { font-size: 12px; color: var(--muted); margin-bottom: 1.5rem; }
 .price-divider { height: 1px; background: rgba(255,255,255,0.06); margin-bottom: 1.5rem; }
-.price-amount {
-  font-family: var(--ff-serif); font-size: 2.8rem; font-weight: 600;
-  color: var(--gold);
-}
+.price-amount { font-family: var(--ff-serif); font-size: 2.8rem; font-weight: 600; color: var(--gold); }
 .price-unit { font-size: 13px; color: var(--muted); margin-bottom: 2rem; }
 .price-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem; }
 .price-list li { font-size: 13px; color: var(--silver); display: flex; align-items: flex-start; gap: 10px; line-height: 1.6; }
 .price-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
-.btn-price {
-  width: 100%; padding: 13px; border-radius: 2px; font-size: 13px;
-  letter-spacing: 0.08em; cursor: pointer; font-family: var(--ff-body);
-  transition: 0.2s;
-}
+.btn-price { width: 100%; padding: 13px; border-radius: 2px; font-size: 13px; letter-spacing: 0.08em; cursor: pointer; font-family: var(--ff-body); transition: 0.2s; }
 .btn-price-gold { background: var(--gold); color: var(--navy-deep); border: none; font-weight: 700; }
 .btn-price-gold:hover { background: var(--gold-light); }
 .btn-price-outline { background: transparent; color: var(--silver-light); border: 1px solid rgba(200,214,229,0.2); }
@@ -339,47 +185,157 @@ section { padding: var(--section-pad); }
 .contact-info p { font-size: 14px; color: var(--silver); line-height: 2.1; margin-bottom: 2.5rem; }
 .contact-details { display: flex; flex-direction: column; gap: 1.25rem; }
 .contact-item { display: flex; align-items: flex-start; gap: 14px; }
-.contact-item-icon {
-  width: 36px; height: 36px; border: 1px solid rgba(184,150,106,0.3);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  color: var(--gold); font-size: 14px; flex-shrink: 0;
-}
+.contact-item-icon { width: 36px; height: 36px; border: 1px solid rgba(184,150,106,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 14px; flex-shrink: 0; }
 .contact-item-text { font-size: 13px; color: var(--silver); line-height: 1.7; }
 .contact-item-label { font-size: 10px; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 2px; }
 .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
 .f-group { display: flex; flex-direction: column; gap: 6px; }
 .f-label { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; }
-.f-ctrl {
-  background: rgba(11,22,40,0.6); border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 2px; padding: 12px 16px; font-size: 14px; color: var(--text);
-  font-family: var(--ff-body); outline: none; transition: border-color 0.2s; width: 100%;
-}
+.f-ctrl { background: rgba(11,22,40,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 2px; padding: 12px 16px; font-size: 14px; color: var(--text); font-family: var(--ff-body); outline: none; transition: border-color 0.2s; width: 100%; }
 .f-ctrl:focus { border-color: rgba(184,150,106,0.5); }
 textarea.f-ctrl { height: 130px; resize: vertical; }
 .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.f-submit {
-  background: var(--gold); color: var(--navy-deep); border: none;
-  padding: 15px; border-radius: 2px; font-size: 14px; font-weight: 700;
-  cursor: pointer; font-family: var(--ff-body); letter-spacing: 0.1em;
-  transition: background 0.2s;
-}
+.f-submit { background: var(--gold); color: var(--navy-deep); border: none; padding: 15px; border-radius: 2px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: var(--ff-body); letter-spacing: 0.1em; transition: background 0.2s; }
 .f-submit:hover { background: var(--gold-light); }
 .f-note { font-size: 11px; color: var(--muted); text-align: center; }
 
 /* ─── FOOTER ─── */
-footer {
-  background: #080f1c;
-  border-top: 1px solid rgba(184,150,106,0.12);
-  padding: 3rem 5rem 2rem;
-}
+footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padding: 3rem 5rem 2rem; }
 .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2.5rem; }
-.footer-brand { }
 .footer-brand-name { font-family: var(--ff-serif); font-size: 1.2rem; color: var(--white); margin-bottom: 6px; }
 .footer-brand-reg { font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
 .footer-links { display: flex; gap: 2rem; }
 .footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--gold-light); }
 .footer-copy { font-size: 11px; color: rgba(122,145,170,0.5); text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.04); }
+
+/* ─── JINBA MODAL ─── */
+.jinba-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(5, 12, 24, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 2rem;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.jinba-overlay.active {
+  opacity: 1; pointer-events: all;
+}
+.jinba-modal {
+  background: var(--navy);
+  border: 1px solid rgba(184,150,106,0.25);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 760px;
+  max-height: 88vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+.jinba-overlay.active .jinba-modal {
+  transform: translateY(0);
+}
+.jinba-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid rgba(184,150,106,0.15);
+  background: rgba(11,22,40,0.6);
+  flex-shrink: 0;
+}
+.jinba-modal-title {
+  display: flex; align-items: center; gap: 12px;
+}
+.jinba-modal-icon {
+  width: 36px; height: 36px;
+  background: rgba(184,150,106,0.1);
+  border: 1px solid rgba(184,150,106,0.3);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px;
+}
+.jinba-modal-label {
+  font-family: var(--ff-serif);
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--white); letter-spacing: 0.04em;
+}
+.jinba-modal-sub {
+  font-size: 10px; color: var(--gold);
+  letter-spacing: 0.15em; text-transform: uppercase;
+  margin-top: 2px;
+}
+.jinba-close {
+  width: 36px; height: 36px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: var(--muted); font-size: 18px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.2s, color 0.2s;
+  line-height: 1;
+}
+.jinba-close:hover { border-color: rgba(184,150,106,0.4); color: var(--gold-light); }
+
+/* Jinbaが未接続の場合のプレースホルダー */
+.jinba-placeholder {
+  flex: 1;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 3rem 2rem; text-align: center;
+  gap: 1.5rem;
+}
+.jinba-placeholder-icon {
+  width: 64px; height: 64px;
+  border: 1px solid rgba(184,150,106,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+  background: rgba(184,150,106,0.05);
+}
+.jinba-placeholder h3 {
+  font-family: var(--ff-serif);
+  font-size: 1.4rem; color: var(--white);
+  font-weight: 600;
+}
+.jinba-placeholder p {
+  font-size: 13px; color: var(--silver);
+  line-height: 2; max-width: 400px;
+}
+.jinba-placeholder-steps {
+  display: flex; flex-direction: column; gap: 10px;
+  text-align: left; width: 100%; max-width: 420px;
+  background: rgba(11,22,40,0.5);
+  border: 1px solid rgba(184,150,106,0.1);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+}
+.jinba-step {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 13px; color: var(--silver);
+}
+.jinba-step-num {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(184,150,106,0.1);
+  border: 1px solid rgba(184,150,106,0.3);
+  color: var(--gold); font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+
+/* Jinbaが接続済みの場合のiframe */
+.jinba-iframe-wrap {
+  flex: 1; overflow: hidden;
+  /* JinbaのURLが設定されるまでdisplay:none */
+  display: none;
+}
+.jinba-iframe-wrap.active { display: block; }
+.jinba-iframe-wrap iframe {
+  width: 100%; height: 100%;
+  border: none; min-height: 520px;
+}
 
 @media (max-width: 1024px) {
   :root { --section-pad: 5rem 2.5rem; }
@@ -395,6 +351,7 @@ footer {
   .ai-layout { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .footer-inner { flex-direction: column; gap: 2rem; }
+  .jinba-modal { max-height: 92vh; }
 }
 </style>
 </head>
@@ -440,22 +397,10 @@ footer {
 
 <!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="stat-item">
-    <span class="stat-num">80%</span>
-    <div class="stat-label">書類作成工数の削減</div>
-  </div>
-  <div class="stat-item">
-    <span class="stat-num">300+</span>
-    <div class="stat-label">対応許認可種別</div>
-  </div>
-  <div class="stat-item">
-    <span class="stat-num">0件</span>
-    <div class="stat-label">許可期限切れ事故</div>
-  </div>
-  <div class="stat-item">
-    <span class="stat-num">翌日〜</span>
-    <div class="stat-label">書類ドラフト納品</div>
-  </div>
+  <div class="stat-item"><span class="stat-num">80%</span><div class="stat-label">書類作成工数の削減</div></div>
+  <div class="stat-item"><span class="stat-num">300+</span><div class="stat-label">対応許認可種別</div></div>
+  <div class="stat-item"><span class="stat-num">0件</span><div class="stat-label">許可期限切れ事故</div></div>
+  <div class="stat-item"><span class="stat-num">翌日〜</span><div class="stat-label">書類ドラフト納品</div></div>
 </div>
 
 <!-- SERVICES -->
@@ -470,12 +415,16 @@ footer {
       <p>産廃・一廃収集運搬許可の有効期限をAIが自動追跡。更新90日前から段階的にアラートを送信し、申請準備をステップガイドで完全サポートします。期限切れによる営業停止リスクをゼロに。</p>
       <span class="svc-badge">AI自動追跡</span>
     </div>
-    <div class="svc-card">
+
+    <!-- ▼ カード02：クリックでJinbaポップアップを開く -->
+    <div class="svc-card clickable" onclick="openJinbaModal()">
       <div class="svc-num">02</div>
       <h3>AI申請書類ドラフト生成</h3>
       <p>顧客基本情報を入力するだけで、許可申請書・事業計画書の下書きをAIが自動生成。記載漏れチェックリストも同時作成し、担当者の確認作業を最小化します。</p>
       <span class="svc-badge">生成AI活用</span>
+      <div class="svc-open-hint">今すぐ試す →</div>
     </div>
+
     <div class="svc-card">
       <div class="svc-num">03</div>
       <h3>許可台帳 クラウド一元管理</h3>
@@ -547,31 +496,11 @@ footer {
   <h2 class="sec-title">最短1週間で<br>運用開始</h2>
   <p class="sec-sub">初期設定から運用開始まで、専任スタッフが完全サポート。現在の業務を止めることなく、スムーズに移行できます。</p>
   <div class="process-steps">
-    <div class="p-step">
-      <div class="p-step-num">01</div>
-      <h4>無料相談・ヒアリング</h4>
-      <p>現在の業務フローと課題を詳しくお聞きし、最適なDX構成を診断します</p>
-    </div>
-    <div class="p-step">
-      <div class="p-step-num">02</div>
-      <h4>カスタマイズ設計</h4>
-      <p>事務所の規模・業務内容に合わせたシステム構成をご提案します</p>
-    </div>
-    <div class="p-step">
-      <div class="p-step-num">03</div>
-      <h4>データ移行・設定</h4>
-      <p>既存の顧客情報・許可データを安全にインポートし、環境を構築します</p>
-    </div>
-    <div class="p-step">
-      <div class="p-step-num">04</div>
-      <h4>研修・運用開始</h4>
-      <p>スタッフ向けトレーニングを実施し、実際の業務で使える状態にします</p>
-    </div>
-    <div class="p-step">
-      <div class="p-step-num">05</div>
-      <h4>継続改善サポート</h4>
-      <p>月次レポートと定期ミーティングで、継続的な効率改善を伴走します</p>
-    </div>
+    <div class="p-step"><div class="p-step-num">01</div><h4>無料相談・ヒアリング</h4><p>現在の業務フローと課題を詳しくお聞きし、最適なDX構成を診断します</p></div>
+    <div class="p-step"><div class="p-step-num">02</div><h4>カスタマイズ設計</h4><p>事務所の規模・業務内容に合わせたシステム構成をご提案します</p></div>
+    <div class="p-step"><div class="p-step-num">03</div><h4>データ移行・設定</h4><p>既存の顧客情報・許可データを安全にインポートし、環境を構築します</p></div>
+    <div class="p-step"><div class="p-step-num">04</div><h4>研修・運用開始</h4><p>スタッフ向けトレーニングを実施し、実際の業務で使える状態にします</p></div>
+    <div class="p-step"><div class="p-step-num">05</div><h4>継続改善サポート</h4><p>月次レポートと定期ミーティングで、継続的な効率改善を伴走します</p></div>
   </div>
 </section>
 
@@ -640,43 +569,25 @@ footer {
       <div class="contact-details">
         <div class="contact-item">
           <div class="contact-item-icon">✉</div>
-          <div>
-            <div class="contact-item-label">EMAIL</div>
-            <div class="contact-item-text">info@takahashi-gyosei.jp</div>
-          </div>
+          <div><div class="contact-item-label">EMAIL</div><div class="contact-item-text">info@takahashi-gyosei.jp</div></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">☎</div>
-          <div>
-            <div class="contact-item-label">TEL</div>
-            <div class="contact-item-text">03-XXXX-XXXX<br><span style="font-size:11px;color:var(--muted)">平日 9:00〜18:00</span></div>
-          </div>
+          <div><div class="contact-item-label">TEL</div><div class="contact-item-text">03-XXXX-XXXX<br><span style="font-size:11px;color:var(--muted)">平日 9:00〜18:00</span></div></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">⌂</div>
-          <div>
-            <div class="contact-item-label">ADDRESS</div>
-            <div class="contact-item-text">〒XXX-XXXX<br>東京都〇〇区〇〇町 X-X-X</div>
-          </div>
+          <div><div class="contact-item-label">ADDRESS</div><div class="contact-item-text">〒XXX-XXXX<br>東京都〇〇区〇〇町 X-X-X</div></div>
         </div>
       </div>
     </div>
     <div>
       <form class="contact-form" onsubmit="handleSubmit(event)">
         <div class="f-row">
-          <div class="f-group">
-            <label class="f-label">お名前 *</label>
-            <input type="text" class="f-ctrl" placeholder="山田 太郎" required>
-          </div>
-          <div class="f-group">
-            <label class="f-label">事務所名</label>
-            <input type="text" class="f-ctrl" placeholder="〇〇行政書士事務所">
-          </div>
+          <div class="f-group"><label class="f-label">お名前 *</label><input type="text" class="f-ctrl" placeholder="山田 太郎" required></div>
+          <div class="f-group"><label class="f-label">事務所名</label><input type="text" class="f-ctrl" placeholder="〇〇行政書士事務所"></div>
         </div>
-        <div class="f-group">
-          <label class="f-label">メールアドレス *</label>
-          <input type="email" class="f-ctrl" placeholder="info@example.com" required>
-        </div>
+        <div class="f-group"><label class="f-label">メールアドレス *</label><input type="email" class="f-ctrl" placeholder="info@example.com" required></div>
         <div class="f-group">
           <label class="f-label">ご相談内容</label>
           <select class="f-ctrl">
@@ -689,10 +600,7 @@ footer {
             <option>その他</option>
           </select>
         </div>
-        <div class="f-group">
-          <label class="f-label">メッセージ</label>
-          <textarea class="f-ctrl" placeholder="現在の課題や、ご要望をご自由にお書きください。"></textarea>
-        </div>
+        <div class="f-group"><label class="f-label">メッセージ</label><textarea class="f-ctrl" placeholder="現在の課題や、ご要望をご自由にお書きください。"></textarea></div>
         <button type="submit" class="f-submit">無料相談を申し込む</button>
         <p class="f-note">通常1営業日以内にご返信いたします。</p>
       </form>
@@ -717,7 +625,99 @@ footer {
   <div class="footer-copy">Copyright &copy; 2025 髙橋行政書士事務所. All Rights Reserved.</div>
 </footer>
 
+<!-- ─── JINBA MODAL ─── -->
+<div class="jinba-overlay" id="jinbaOverlay" onclick="handleOverlayClick(event)">
+  <div class="jinba-modal" id="jinbaModal">
+
+    <!-- ヘッダー -->
+    <div class="jinba-modal-header">
+      <div class="jinba-modal-title">
+        <div class="jinba-modal-icon">📄</div>
+        <div>
+          <div class="jinba-modal-label">AI申請書類ドラフト生成</div>
+          <div class="jinba-modal-sub">Powered by Jinba Flow</div>
+        </div>
+      </div>
+      <button class="jinba-close" onclick="closeJinbaModal()">✕</button>
+    </div>
+
+    <!-- Jinba未接続時のプレースホルダー（URLを設定したら非表示にする） -->
+    <div class="jinba-placeholder" id="jinbaPlaceholder">
+      <div class="jinba-placeholder-icon">⚙️</div>
+      <h3>ワークフロー準備中</h3>
+      <p>JinbaのワークフローURLを設定すると、ここでAI書類ドラフト生成が動作します。</p>
+      <div class="jinba-placeholder-steps">
+        <div class="jinba-step">
+          <div class="jinba-step-num">1</div>
+          <span>Jinba FlowでワークフローをPublicに公開する</span>
+        </div>
+        <div class="jinba-step">
+          <div class="jinba-step-num">2</div>
+          <span>発行されたJinba AppのURLをコピーする</span>
+        </div>
+        <div class="jinba-step">
+          <div class="jinba-step-num">3</div>
+          <span>このHTMLの <code style="background:rgba(184,150,106,0.1);color:var(--gold);padding:1px 6px;border-radius:2px;font-size:11px">JINBA_APP_URL</code> をそのURLに書き換える</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jinba接続済み時のiframe（URLを設定したらactiveクラスを付ける） -->
+    <div class="jinba-iframe-wrap" id="jinbaIframeWrap">
+      <iframe id="jinbaIframe" src="" title="AI申請書類ドラフト生成" allow="clipboard-write"></iframe>
+    </div>
+
+  </div>
+</div>
+
 <script>
+// ============================================================
+// ★ JinbaのURLをここに設定してください ★
+// Jinba FlowでワークフローをPublicに公開後、
+// 発行されたApp URLを下記に貼り付けてください。
+// 例: const JINBA_APP_URL = "https://app.jinba.io/xxxxx";
+// ============================================================
+const JINBA_APP_URL = ""; // ← ここにURLを入れる
+
+function openJinbaModal() {
+  const overlay = document.getElementById('jinbaOverlay');
+  const placeholder = document.getElementById('jinbaPlaceholder');
+  const iframeWrap = document.getElementById('jinbaIframeWrap');
+  const iframe = document.getElementById('jinbaIframe');
+
+  if (JINBA_APP_URL && JINBA_APP_URL.trim() !== "") {
+    // URLが設定済み → iframeを表示
+    placeholder.style.display = 'none';
+    iframeWrap.classList.add('active');
+    if (!iframe.src || iframe.src !== JINBA_APP_URL) {
+      iframe.src = JINBA_APP_URL;
+    }
+  } else {
+    // URL未設定 → プレースホルダーを表示
+    placeholder.style.display = 'flex';
+    iframeWrap.classList.remove('active');
+  }
+
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeJinbaModal() {
+  document.getElementById('jinbaOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('jinbaOverlay')) {
+    closeJinbaModal();
+  }
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeJinbaModal();
+});
+
+// ─── 既存のチャットbot ───
 const qaDB = {
   "産廃": `産業廃棄物収集運搬業許可の更新に必要な主な書類は以下の通りです。\n\n①許可申請書\n②事業計画書\n③車両の車検証コピー（運搬車両すべて）\n④法人の登記事項証明書（発行3ヶ月以内）\n⑤役員・株主全員の住民票\n⑥産廃講習会修了証の写し\n⑦直近2期分の財務諸表\n\n都道府県によって追加書類が必要な場合があります。詳細はお気軽にご相談ください。`,
   "費用": `廃棄物処理業許可の更新申請における行政手数料（目安）は以下の通りです。\n\n・産廃収集運搬許可（法人）：約73,000円\n・産廃収集運搬許可（個人）：約73,000円\n・一廃収集運搬許可：都道府県・市区町村により異なります\n\n当事務所の代行報酬については、許可の種類・都道府県数・事業規模により異なりますので、別途お見積りいたします。`,
@@ -752,10 +752,7 @@ function sendMsg(msg) {
   typing.innerHTML = `<div class="c-av av-ai">AI</div><div class="c-bubble"><span style="display:inline-flex;gap:4px"><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.2s infinite;display:inline-block"></span><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.2s infinite 0.2s;display:inline-block"></span><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.2s infinite 0.4s;display:inline-block"></span></span></div>`;
   area.appendChild(typing);
   area.scrollTop = area.scrollHeight;
-  setTimeout(() => {
-    area.removeChild(typing);
-    addMsg(getAIReply(msg), false);
-  }, 900);
+  setTimeout(() => { area.removeChild(typing); addMsg(getAIReply(msg), false); }, 900);
 }
 
 document.getElementById('aiSend').onclick = function() {
