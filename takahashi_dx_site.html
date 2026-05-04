@@ -76,6 +76,110 @@ nav {
 .hero-ornament::before { content: ''; position: absolute; inset: 20px; border: 1px solid rgba(184,150,106,0.06); border-radius: 50%; }
 .hero-ornament::after { content: ''; position: absolute; inset: 60px; border: 1px solid rgba(184,150,106,0.04); border-radius: 50%; }
 .hero-content { position: relative; z-index: 1; max-width: 680px; padding-left: 3rem; }
+
+/* ─── HERO VISUAL: プロダクトUIモックアップ ─── */
+.hero-visual {
+  position: absolute;
+  right: 5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 460px;
+  max-width: 38vw;
+  z-index: 2;
+}
+.hv-dashboard {
+  background: linear-gradient(180deg, rgba(17,34,64,0.95), rgba(11,22,40,0.92));
+  border: 1px solid rgba(184,150,106,0.28);
+  border-radius: 6px;
+  padding: 1.4rem;
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(184,150,106,0.05);
+  backdrop-filter: blur(14px);
+}
+.hv-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-bottom: 1rem; margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(184,150,106,0.18);
+}
+.hv-title {
+  font-family: var(--ff-serif);
+  font-size: 14px; color: var(--white);
+  letter-spacing: 0.1em;
+}
+.hv-status {
+  font-size: 10px; color: var(--gold);
+  background: rgba(184,150,106,0.12);
+  padding: 4px 10px; border-radius: 2px;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(184,150,106,0.28);
+}
+.hv-list { display: flex; flex-direction: column; gap: 0.55rem; }
+.hv-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.85rem 1rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(184,150,106,0.1);
+  border-radius: 4px;
+}
+.hv-item.alert {
+  background: rgba(184,150,106,0.08);
+  border-color: rgba(184,150,106,0.45);
+}
+.hv-item-l { display: flex; flex-direction: column; gap: 4px; }
+.hv-comp { font-size: 12px; color: var(--white); font-weight: 500; }
+.hv-meta { font-size: 10px; color: var(--muted); letter-spacing: 0.04em; }
+.hv-badge {
+  font-size: 9px; color: var(--silver);
+  border: 1px solid rgba(143,163,188,0.3);
+  padding: 3px 8px; border-radius: 2px;
+  letter-spacing: 0.08em; white-space: nowrap;
+}
+.hv-badge.alert {
+  color: var(--gold-light);
+  border-color: rgba(184,150,106,0.55);
+  background: rgba(184,150,106,0.12);
+}
+.hv-badge.ok {
+  color: #7ec1a3;
+  border-color: rgba(126,193,163,0.35);
+}
+/* AIアラート フローティングカード */
+.hv-ai-card {
+  position: absolute;
+  bottom: -32px; left: -36px;
+  background: var(--navy-light);
+  border: 1px solid rgba(184,150,106,0.45);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  display: flex; gap: 0.75rem; align-items: flex-start;
+  width: 280px;
+  box-shadow: 0 25px 50px -10px rgba(0,0,0,0.5);
+  animation: hv-float 6s ease-in-out infinite;
+}
+@keyframes hv-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+.hv-ai-icon {
+  flex-shrink: 0;
+  width: 32px; height: 32px;
+  background: var(--gold);
+  color: var(--navy-deep);
+  display: grid; place-items: center;
+  border-radius: 4px;
+  font-family: var(--ff-serif);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.hv-ai-body strong {
+  font-size: 10px; color: var(--gold-light);
+  letter-spacing: 0.12em;
+  display: block; margin-bottom: 4px;
+  font-weight: 600;
+}
+.hv-ai-body p {
+  font-size: 11px; color: var(--silver-light);
+  line-height: 1.55;
+}
 .hero-tag { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 2rem; color: var(--gold); font-size: 11px; letter-spacing: 0.2em; }
 .hero-tag::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
 .hero h1 { font-family: var(--ff-serif); font-size: clamp(2.4rem, 4.5vw, 4rem); font-weight: 600; line-height: 1.2; margin-bottom: 1.8rem; letter-spacing: 0.04em; color: var(--white); }
@@ -352,6 +456,9 @@ footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padd
   .nav-links { display: none; }
   .footer-inner { flex-direction: column; gap: 2rem; }
   .jinba-modal { max-height: 92vh; }
+  /* タブレット以下ではヒーロービジュアルを非表示 */
+  .hero-visual { display: none; }
+  .hero-content { max-width: 100%; }
 }
 </style>
 </head>
@@ -393,6 +500,47 @@ footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padd
       <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">サービス詳細を見る</button>
     </div>
   </div>
+
+  <!-- ヒーロー右側：プロダクトUIモックアップ -->
+  <div class="hero-visual">
+    <div class="hv-dashboard">
+      <div class="hv-head">
+        <span class="hv-title">許可台帳</span>
+        <span class="hv-status">3件 要対応</span>
+      </div>
+      <div class="hv-list">
+        <div class="hv-item alert">
+          <div class="hv-item-l">
+            <span class="hv-comp">A産業株式会社</span>
+            <span class="hv-meta">産廃収集運搬｜更新まで 12日</span>
+          </div>
+          <span class="hv-badge alert">要対応</span>
+        </div>
+        <div class="hv-item">
+          <div class="hv-item-l">
+            <span class="hv-comp">B環境サービス</span>
+            <span class="hv-meta">一般廃棄物処分｜更新まで 84日</span>
+          </div>
+          <span class="hv-badge">予定</span>
+        </div>
+        <div class="hv-item">
+          <div class="hv-item-l">
+            <span class="hv-comp">C クリーン株式会社</span>
+            <span class="hv-meta">産廃中間処理｜更新まで 156日</span>
+          </div>
+          <span class="hv-badge ok">良好</span>
+        </div>
+      </div>
+    </div>
+    <!-- フローティングAIアラート -->
+    <div class="hv-ai-card">
+      <div class="hv-ai-icon">AI</div>
+      <div class="hv-ai-body">
+        <strong>AI ALERT</strong>
+        <p>A産業の更新書類ドラフトを生成しました</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- STATS BAR -->
@@ -416,13 +564,13 @@ footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padd
       <span class="svc-badge">AI自動追跡</span>
     </div>
 
-    <!-- ▼ カード02：クリックでJinbaポップアップを開く -->
-    <div class="svc-card clickable" onclick="openJinbaModal()">
+    <!-- カード02：クリックでAIデモセクションへスクロール -->
+    <div class="svc-card clickable" onclick="document.getElementById('ai-demo').scrollIntoView({behavior:'smooth'})">
       <div class="svc-num">02</div>
       <h3>AI申請書類ドラフト生成</h3>
       <p>顧客基本情報を入力するだけで、許可申請書・事業計画書の下書きをAIが自動生成。記載漏れチェックリストも同時作成し、担当者の確認作業を最小化します。</p>
       <span class="svc-badge">生成AI活用</span>
-      <div class="svc-open-hint">今すぐ試す →</div>
+      <div class="svc-open-hint">AIデモを見る →</div>
     </div>
 
     <div class="svc-card">
@@ -613,7 +761,10 @@ footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padd
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-brand-name">髙橋行政書士事務所</div>
-      <div class="footer-brand-reg">行政書士登録番号：第XXXXXXX号　｜　東京都行政書士会会員</div>
+      <!-- TODO: 行政書士登録番号が確定したら下記の <REG_NO> を実数字に置換し、コメントを外してください
+      <div class="footer-brand-reg">行政書士登録番号：第<REG_NO>号　｜　東京都行政書士会会員</div>
+      -->
+      <div class="footer-brand-reg">東京都行政書士会会員</div>
     </div>
     <div class="footer-links">
       <a href="#services">サービス</a>
