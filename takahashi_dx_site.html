@@ -224,10 +224,6 @@ section { padding: var(--section-pad); }
 .svc-card p { font-size: 13px; color: var(--silver); line-height: 1.9; }
 .svc-badge { display: inline-block; margin-top: 1.25rem; border: 1px solid rgba(184,150,106,0.3); color: var(--gold); border-radius: 2px; padding: 3px 10px; font-size: 10px; letter-spacing: 0.1em; }
 
-/* ─── EXPERTISE ─── */
-.expertise-section { background: var(--navy-deep); border-top: 1px solid rgba(184,150,106,0.1); }
-.expertise-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: center; }
-
 /* ─── AI DEMO ─── */
 .ai-section { background: var(--navy-deep); }
 .ai-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
@@ -850,7 +846,7 @@ footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padd
         </div>
         <div class="jinba-step">
           <div class="jinba-step-num">2</div>
-          <span>発行されたJinba App의 URLをコピーする</span>
+          <span>発行されたJinba AppのURLをコピーする</span>
         </div>
         <div class="jinba-step">
           <div class="jinba-step-num">3</div>
@@ -949,7 +945,7 @@ function sendMsg(msg) {
   typing.innerHTML = `<div class="c-av av-ai">AI</div><div class="c-bubble"><span style="display:inline-flex;gap:4px"><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.2s infinite;display:inline-block"></span><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.2s infinite 0.2s;display:inline-block"></span><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.2s infinite 0.4s;display:inline-block"></span></span></div>`;
   area.appendChild(typing);
   area.scrollTop = area.scrollHeight;
-  setTimeout(() => { if(typing.parentNode) area.removeChild(typing); addMsg(getAIReply(msg), false); }, 900);
+  setTimeout(() => { if (typing.parentNode) area.removeChild(typing); addMsg(getAIReply(msg), false); }, 900);
 }
 
 document.getElementById('aiSend').onclick = function() {
