@@ -492,7 +492,7 @@ footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padd
   <div class="hero-content">
     <div class="hero-tag">行政書士業務のデジタル革新</div>
     <h1>
-      <em>廃棄物処理許可から、すべての行政手続きへ。</em>
+      <em>廃棄物処理許可から、<br>すべての行政手続きへ。</em>
       AIと自動化で、<br>事務所の生産性を<br>根本から変える。
     </h1>
     <p class="hero-desc">煩雑な許可更新の追跡、書類作成、顧客管理。これらを髙橋行政書士事務所が開発したDXシステムが一括して担います。法律の専門家が、テクノロジーの力を最大限に活用する時代へ。</p>
@@ -566,9 +566,9 @@ footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padd
     </div>
 
     <!-- カード02：クリックでAIデモセクションへスクロール -->
-    <div class="svc-card clickable" onclick="document.getElementById('ai-demo').scrollIntoView({behavior:'smooth'})">
+    <div class="svc-card clickable" onclick="openJinbaModal()">
       <div class="svc-num">02</div>
-      <h3>AI申請書類ドラフト生成</h3>
+      <h3>(仮) AI申請書類ドラフト生成</h3>
       <p>顧客基本情報を入力するだけで、許可申請書・事業計画書の下書きをAIが自動生成。記載漏れチェックリストも同時作成し、担当者の確認作業を最小化します。</p>
       <span class="svc-badge">生成AI活用</span>
       <div class="svc-open-hint">AIデモを見る →</div>
@@ -576,25 +576,25 @@ footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padd
 
     <div class="svc-card">
       <div class="svc-num">03</div>
-      <h3>許可台帳 クラウド一元管理</h3>
+      <h3>(仮) 許可台帳 クラウド一元管理</h3>
       <p>複数クライアントの許可情報・更新状況・担当者・手数料をダッシュボードで一元管理。進捗状況をリアルタイムで把握でき、チーム間の情報共有もスムーズです。</p>
       <span class="svc-badge">クラウド管理</span>
     </div>
     <div class="svc-card">
       <div class="svc-num">04</div>
-      <h3>業務ワークフロー自動化</h3>
+      <h3>(仮) 業務ワークフロー自動化</h3>
       <p>受任から申請完了・請求書発行まで、業務フロー全体を自動化。メール送信、進捗ステータス更新、書類ファイリングをノーコードで連携し、属人化を解消します。</p>
       <span class="svc-badge">ノーコード自動化</span>
     </div>
     <div class="svc-card">
       <div class="svc-num">05</div>
-      <h3>法改正・行政情報 自動収集</h3>
+      <h3>(仮) 法改正・行政情報 自動収集</h3>
       <p>廃棄物処理法・環境省通達・都道府県条例の改正情報をAIが24時間モニタリング。クライアントへの影響度分析レポートを自動作成し、先手の提案営業を可能にします。</p>
       <span class="svc-badge">リーガルテック</span>
     </div>
     <div class="svc-card">
       <div class="svc-num">06</div>
-      <h3>顧客向けAIチャットボット</h3>
+      <h3>(仮) 顧客向けAIチャットボット</h3>
       <p>事務所ウェブサイトに設置できるAIアシスタント。許可の種類・必要書類・費用の概算・更新手続きの流れを24時間365日自動案内し、効率化します。</p>
       <span class="svc-badge">カスタマーDX</span>
     </div>
@@ -686,7 +686,7 @@ footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padd
 <section id="process" class="process-section">
   <div class="sec-eyebrow">How It Works</div>
   <h2 class="sec-title">最短1週間で<br>運用開始</h2>
-  <p class="sec-sub">初期設定から運用開始まで、専任スタッフが完全サポート。現在の業務を止めることなく、スムーズに移行できます。</p>
+  <p class="sec-sub">初期設定から運用開始まで、専任スタッフが完全サポート. 現在の業務を止めることなく、スムーズに移行できます。</p>
   <div class="process-steps">
     <div class="p-step"><div class="p-step-num">01</div><h4>無料相談・ヒアリング</h4><p>現在の業務フローと課題を詳しくお聞きし、最適なDX構成を診断します</p></div>
     <div class="p-step"><div class="p-step-num">02</div><h4>カスタマイズ設計</h4><p>事務所の規模・業務内容に合わせたシステム構成をご提案します</p></div>
@@ -855,7 +855,7 @@ footer { background: #080f1c; border-top: 1px solid rgba(184,150,106,0.12); padd
       </div>
     </div>
 
-    <!-- Jinba接続済み時のiframe（URLを設定したらactiveクラスを付ける） -->
+    <!-- Jinba接続済み時の iframe（URLを設定したら activeクラスを付ける） -->
     <div class="jinba-iframe-wrap" id="jinbaIframeWrap">
       <iframe id="jinbaIframe" src="" title="AI申請書類ドラフト生成" allow="clipboard-write"></iframe>
     </div>
@@ -967,3 +967,4 @@ function handleSubmit(e) {
 </script>
 </body>
 </html>
+
